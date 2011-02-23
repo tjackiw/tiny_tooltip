@@ -1,0 +1,22 @@
+= TinyTooltip
+
+This tiny plugin lets you create those fancy mouse-over pop-up divs on html pages
+
+== Requirements:
+
+- event:Selectors JS (http://encytemedia.com/event-selectors/)
+- Prototype JS (http://www.prototypejs.org/) 
+
+== Example:
+
+  page     = "This is a cool little plugin!"
+  keywords = [{:html => "cool", :summary => "Ruby's awesome!"}, {:html => "plugin", :summary => "Rails is awesome!"}]
+  tooltip  = TinyTooltip.new(page, keywords)
+  tooltip.replace
+  => "This is a <a href='#' class='tooltip'>cool</a><div class='poplayer' id='cool' style=''>Ruby's awesome!</div> 
+     little <a href='#' class='tooltip'>plugin</a><div class='poplayer' id='plugin' style=''>Rails is awesome!</div>!"
+
+== License:
+
+Copyright (c) 2007 Thiago Jackiw. Released under the MIT license.
+
